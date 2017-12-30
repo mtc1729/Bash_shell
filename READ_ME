@@ -1,0 +1,18 @@
+To execute the shell
+gcc -o main_file main_file.c
+./main_file
+
+All basic shell command supported
+
+Caveat :
+1.Since background redirects the control to /dev/null closing standard input , history command does not display the commands followed by &.
+2. ls -l | sort is printing the prompt dialogue New_shell~$:$ but the prompt returns back. So even though its blank , one can type a command
+and execute it. However this problem does'nt occur with other commands.
+
+Unjustified combinations are as follows :
+1. Input-output redirection followed by pipe i.e. wc -l < input.txt | sort
+2. Output followed by input operator : i.e. ls -l > out.txt < in.txt
+3. <command> | | | is invalid
+
+Up and down arrow key works by pressing up arrow followed by enter and pressing down arrow followed by enter to display the history in top or down fashion
+ 
